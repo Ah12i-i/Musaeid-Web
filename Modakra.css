@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #ededed;
+}
+
+/* Header */
+header{
+    width: 100%;
+    height: 100px;
+    background: #31304D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 250px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #ededed;
+    font-size: 20px;
+    padding: 5px 75px;
+    border-radius: 50px;
+    transition: 0.4s;
+    margin: 0 15px;
+    
+}
+.nav-bar ul li a:hover{
+    color: #161A30;
+    background: #ededed;
+}
+.nav-bar ul li a.active{
+    color: #161A30;
+    background: linear-gradient(1056317deg, #5c5b85, #ffffff);
+}
+
+@media only screen and (max-width: 1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    header{
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 900px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: #ededed;
+        margin: 6px 0;
+    }
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #161A30;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+    }
+}
+
+
+/* قسم المحتوى */
+#content{
+    margin-top: 60px;
+    padding: 10px;
+    padding-left: 100px; /* المسافة من اليسار */
+    padding-right: 100px; /* المسافة من اليمين */
+    box-sizing: border-box; /* يضمن أن padding يُحسب ضمن الحجم الكلي للعنصر */
+}
+
+.hero-section{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    height: 100vh;
+    display : inline;
+}
+
+.hero-content h1{
+    font-size: 30px;
+    color: #161A30;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* قائمة التصفح */
+.browse-lists{
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 25px;
+}
+
+/* خلفية قائمة التصفح */
+.browse-lists .lists{
+    display: block;
+    text-align: right;
+    display: block;
+    color: #161A30;
+    background-color: #dadadb;
+    padding: 15px 20px;
+    font-size: 25px; 
+    align-items: center;
+    border-radius: 15px;
+}
+
+/* خط قائمة التصفح */
+.browse-lists .lists a{
+    color: #161A30;
+    display: inline;
+    padding: 0px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin: 0 5px;
+}
+
+/* تعديلات على قائمة التصفح */
+.browse-lists .lists a:hover{
+    color: #31304D;
+    background-color: #c5c5c5;
+    margin: 10px;
+    
+}
+
+/* المذاكرة من خلال ChatGPT */
+.content{
+    margin: 16%;
+    margin-top: 100px;
+}
+
+.content hr{
+    border: none;
+    height: 2px;
+    background-color: #cecece;
+    margin: 0;
+    padding: 5;
+    margin: 100px -16px;
+}
+
+.content h2{
+    color: #161A30;
+    font-size: 25px;
+}
+
+.ChatGPT-para .n1{
+    font-size: 20px;
+    margin-top: 1%;
+}
+  
+/* بعض الامور المفيدة التي يمكنك فعلها من خلال الـ ChatGPT */
+.ChatGPT-Benefits h3{
+    font-size: 25px;
+    color: #161A30;
+    margin-top: -2%;
+}
+
+.ChatGPT-Benefits hr{
+    margin: 100px -16px;
+}
+
+.ChatGPT-Benefits ul{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.ChatGPT-Benefits li{
+    margin-top: 20px;
+}
+
+.ChatGPT-Benefits img{
+    height: auto;
+    width: 15px;
+}
+
+/* المذاكرة من مصادر خارجية */
+.Sources hr{
+    margin: 100px -16px;
+}
+
+.Sources h4{
+    font-size: 25px;
+    color: #161A30;
+    margin-top: -2%;
+}
+
+.Sources ul{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.Sources li{
+    margin-top: 20px;
+}
+
+.Sources img{
+    height: auto;
+    width: 14px;
+}
+
+/* كل مايخص الازرار */
+.button {
+    width: 303px;
+    height: 50px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    background-color: #31304D;
+    outline: 3px #161A30 solid;
+    outline-offset: -3px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.button .text {
+    color: rgb(255, 255, 255); /* لون النص الأساسي */
+    font-size: 21px;
+    transition: color 400ms;
+}
+
+.button:hover .text {
+    color: #161A30; /* لون النص عند التأشير */
+}
+
+.button img{
+    width: auto; 
+    height:25px;
+}
+
+.button svg path {
+    transition: 400ms;
+}
+  
+.button:hover {
+    background-color: transparent;
+}
+
+
+/* footer */
+.footer {
+    padding: 20px;
+    color: #ededed;
+    background-color: #31304D;
+    display: flex;
+    justify-content: center;
+    margin-top: -50px; /* Use a negative value to pull the footer up */
+    margin-bottom: 0; /* Adjust bottom margin as needed */
+}
